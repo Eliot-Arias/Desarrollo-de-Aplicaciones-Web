@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;    
+}
+
+.calculadora{
+    margin: 10% auto;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.calculadora--item{
+    margin: 0 auto;
+    width: fit-content;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+}
+
+#num1, #num2{
+    margin: 2px 1px;
+}
+
+.calculadora--btn{
+    margin: 2px auto;
+    width: 80px;
+}
+
