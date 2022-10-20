@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>SENTENCIA CONDICIONAL IF</h1>
+        <hr color="red">
+        <form action="ejer1.php" class="form">
+            <table bgcolor="bfb8b8" border="1" bordercolor="write">
+                <tr>
+                    <td colspan="4">SELECCIONE SEXO:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="rdBtnSexo" id="rdBtnSexo" value="Masculino">
+                    </td>
+                    <td>
+                        Masculino
+                    </td>
+                    <td>
+                        <input type="radio" name="rdBtnSexo" id="rdBtnSexo2" value="Femenino">                        
+                    </td>
+                    <td>Femenino</td>
+                    <tr>
+                        <td colspan="4"><button onclick="validar()" type="submit" ">Procesar</button></td>
+                    </tr>
+                </tr>
+                <tr></tr>
+            </table>
+        </form>
+    </center>
+    <script>
+        function validar(){
+            if(document.getElementById('rdBtnSexo').checked){                
+            }
+            else if(document.getElementById('rdBtnSexo2').checked){                
+            }
+            else{
+                alert("Dede de seleccionar una opción");
+            }
+        }
+    </script>
+
+</body>
+</html>
