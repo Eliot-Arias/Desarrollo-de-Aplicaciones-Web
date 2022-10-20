@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action="Validacion.php">
+            <table border="2" bordercolor="blue" bgcolor="bfb8b8">
+                <tr>
+                    <td colspan="2"><center><b>Matricula Estudiante</b></center></td>
+                </tr>
+                <tr>
+                    <td>Nombre Estudiante</td>
+                    <td><input type="text" name="nombreEstudiante"></td>
+                </tr>
+                <tr>
+                    <td>Seleccione Curso</td>
+                    <td>
+                        <select name="curso" id="curso">
+                            <option value="Andorid">Android</option>
+                            <option value="PHP">PHP</option>
+                            <option value="JAVA">JAVA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Precio Mensual</td>
+                    <td><input id="precioMensual" type="text"></input></td>
+                </tr>
+                <tr>
+                    <td>Duracion Mes</td>
+                    <td><input id="precioMensual" type="text"></input></td>
+                </tr>
+                <tr>
+                    <td>Forma de Pago</td>
+                    <td>
+                        <input type="radio" name="formaPago" id="dscto">
+                        <label for="dscto">TOTAL DESCTO 10%</label>
+                        <input type="radio" name="formaPago" id="sinDscto">                    
+                        <label for="sinDscto">SEGMENTADA DESCTO 0%</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adicionales</td>
+                    <td>
+                        <input type="checkbox" name="excel" id="excel">
+                        <label for="excel">Excel 50 S/.</label>
+                        <input type="checkbox" name="windows" id="windows">
+                        <label for="windows">Windows 50 S/.</label>
+                        <input type="checkbox" name="word" id="word">
+                        <label for="word">Word 50 S/.</label>
+                    </td>                
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" onclick="asignarPrecios()" value="Procesar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <script>
+        function asignarPrecios(){
+            androidDuracion = 10;
+            androidPrecio = 300;
+
+            phpDuracion = 12;
+            phpPrecio = 350;
+
+            javaDuracion = 9;
+            javaPrecio = 200;
+            
+            cursoElegido = document.getElementById('curso').value;
+
+            if(cursoElegido == "Android"){
+                
+            }
+        }
+    </script>
+</body>
+</html>
