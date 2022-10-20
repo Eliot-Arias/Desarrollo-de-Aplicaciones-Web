@@ -13,6 +13,46 @@
 
     
     ?>
+
+    <!--center>
+        <table border="1">
+            <tr>
+                <td>Alumno</td>
+                <td>Notas</td>
+                <td>Estado</td>
+            </tr>
+            <tr>
+                <td>
+                    <?php/*
+                    for($i = 0; $i <5; $i++){
+                        echo $alumnos[$i] . '<br/>';
+                    }*/
+                    ?>
+                </td>
+                <td>
+                    <?php/*
+                    for($i = 0; $i <5; $i++){                    
+                        echo $notas[$i] . '<br/>';
+                    }*/
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    /*for($i = 0; $i <5; $i++){
+                        if($notas[$i] > 10){
+                            echo 'aprobado';
+                        }elseif($notas[$i] < 11){
+                            echo 'desaprobado';
+                        }
+                        echo '<br/>';
+                    }*/
+                    ?>
+                </td>
+            </tr>
+        </table>
+    </center-->
+
+    <!--Fichero con bucle While-->
     <center>
         <table border="1">
             <tr>
@@ -23,27 +63,33 @@
             <tr>
                 <td>
                     <?php
-                    for($i = 0; $i <5; $i++){
+                    $i = 0;
+                    while($i <5){
                         echo $alumnos[$i] . '<br/>';
+                        $i++;
                     }
                     ?>
                 </td>
                 <td>
                     <?php
-                    for($i = 0; $i <5; $i++){                    
+                    $i = 0;
+                    while($i <5){
                         echo $notas[$i] . '<br/>';
+                        $i++;
                     }
                     ?>
                 </td>
                 <td>
                     <?php
-                    for($i = 0; $i <5; $i++){
+                    $i = 0;
+                    while($i <5){
                         if($notas[$i] > 10){
                             echo 'aprobado';
                         }elseif($notas[$i] < 11){
                             echo 'desaprobado';
                         }
                         echo '<br/>';
+                        $i++;
                     }
                     ?>
                 </td>

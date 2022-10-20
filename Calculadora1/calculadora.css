@@ -19,7 +19,6 @@ body{
 .calculadora--item{
     margin: 0 auto;
     width: fit-content;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content:stretch;
@@ -32,5 +31,9 @@ body{
 .calculadora--btn{
     margin: 2px auto;
     width: 80px;
+}
+
+.calculadora--btn:hover{
+    background-color: blueviolet;
 }
 
