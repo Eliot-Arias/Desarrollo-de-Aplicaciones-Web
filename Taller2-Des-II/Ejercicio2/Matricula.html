@@ -33,7 +33,7 @@
                 </tr>
                 <tr>
                     <td>Duracion Mes</td>
-                    <td><input id="precioMensual" type="text"></input></td>
+                    <td><input id="duracionMes" type="text"></input></td>
                 </tr>
                 <tr>
                     <td>Forma de Pago</td>
@@ -74,11 +74,8 @@
             javaDuracion = 9;
             javaPrecio = 200;
             
-            cursoElegido = document.getElementById('curso').value;
+            document.getElementById('precioMensual').insertAdjacentHTML('beforeend', androidPrecio);
 
-            if(cursoElegido == "Android"){
-                
-            }
         }
     </script>
 </body>
