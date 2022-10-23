@@ -93,7 +93,7 @@
                         echo implode(' - ', $_GET['cursosSeleccionados']);
                         foreach( $_GET['cursosSeleccionados'] as $cursos){
                             $cursosAdicionales = $cursosAdicionales . ' ' . $cursos;
-
+                            
                         }                       
                     }
                     ?>
