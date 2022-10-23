@@ -89,12 +89,14 @@
                         echo "No selecciono ningun curso";
                     }*/
                     $cursosAdicionales = "";
-                    if (isset($_GET['cursosSeleccionados'])) {                        
+                    if (isset($_GET['cursosSeleccionados'])) {                      
                         echo implode(' - ', $_GET['cursosSeleccionados']);
                         foreach( $_GET['cursosSeleccionados'] as $cursos){
                             $cursosAdicionales = $cursosAdicionales . ' ' . $cursos;
                             
                         }                       
+                    }else{
+                        echo "No selecciono ningun curso adicional";
                     }
                     ?>
                 </td>
@@ -108,20 +110,24 @@
                     $validar = $formaPago == 'dscto';
                     
                     if($validar){
-                        if(count($_GET['cursosSeleccionados']) == 3){
-                            echo $pagoConDscto + 150;
-                        }elseif(count($_GET['cursosSeleccionados']) == 2){
-                            echo $pagoConDscto + 100;
+                        if($cursosAdicionales == ""){
+                            echo $pagoConDscto;
                         }elseif(count($_GET['cursosSeleccionados']) == 1){
                             echo $pagoConDscto + 50;
+                        }elseif(count($_GET['cursosSeleccionados']) == 2){
+                            echo $pagoConDscto + 100;
+                        }elseif(count($_GET['cursosSeleccionados']) == 3){
+                            echo $pagoConDscto + 150;
                         }
                     }elseif($validar == false){
-                        if(count($_GET['cursosSeleccionados']) == 3){
-                            echo $pagoSinDscto + 150;
-                        }elseif(count($_GET['cursosSeleccionados']) == 2){
-                            echo $pagoSinDscto + 100;
+                        if($cursosAdicionales == ""){
+                            echo $pagoSinDscto;
                         }elseif(count($_GET['cursosSeleccionados']) == 1){
                             echo $pagoSinDscto + 50;
+                        }elseif(count($_GET['cursosSeleccionados']) == 2){
+                            echo $pagoSinDscto + 100;
+                        }elseif(count($_GET['cursosSeleccionados']) == 3){
+                            echo $pagoSinDscto + 150;
                         }
                     }
                     ?>
