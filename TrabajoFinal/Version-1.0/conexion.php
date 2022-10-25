@@ -16,6 +16,4 @@ try {
 } catch (PDOException $error) {
     echo "Conexion Erronea" . $error;
 }
-
-
 ?>

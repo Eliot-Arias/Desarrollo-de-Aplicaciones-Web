@@ -1,0 +1,20 @@
+.card-header{
+    text-align: center;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+.btn-form{
+    width: 60%;
+    margin: 0 20%;
+}
+
+.pregunta{
+    text-align: center;
+}
+
+.link:hover{
+    text-decoration: none;
+}
