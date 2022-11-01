@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="estilos.css">
     <title>Ingreso</title>
 </head>
-<body>
+<body> 
     <div class="container">
         <div class="row">
             <div class="col-md-3">                
             </div>
             <div class="col-md-6">
+                <br>
+                <br>
+                <br>
                 <br>
                 <br>
                 <br>
@@ -32,10 +35,7 @@
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                             </div>
-                            <div class="form-check">
-                                <!--input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label-- class="form-check-label" for="exampleCheck1">Recordarme</label-->
-                            </div>
+                            <br>                            
                             <div class="form-group">
                                 <button type="submit" class="btn btn-form btn-primary">Ingresar</button>                                
                             </div>

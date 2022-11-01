@@ -15,9 +15,8 @@
                 
             </div>
             <div class="col-md-6">
-                <br/>
-                <br/>
-                <br/>
+                <br>
+                <br>
                 <div class="card">
                     <div class="card-header"><h4>Registro</h4></div>
                     <div class="card-body">
@@ -31,16 +30,28 @@
                                 <input type="text" class="form-control" id="apellidos" placeholder="Ingrese Apellidos">
                             </div>
                             <div class="form-group">
-                                <label for="nombreUsuario">Nombre de Usuario Nuevo</label>
+                                <label for="edad">Edad</label>
+                                <input type="number" class="form-control" id="edad" placeholder="Ingrese Edad">                                
+                            </div>
+                            <div class="form-group">
+                                <label for="fecNac">Fecha de Nacimiento </label>
+                                <input type="date" class="form-control" id="fecNac" placeholder="Ingrese Edad">                                
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreUsuario">Correo Electronico</label>
+                                <input type="email" class="form-control" id="nombreUsuario" placeholder="Ingrese Correo">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreUsuario">Nombre de Usuario </label>
                                 <input type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese Nombre de Usuario">
                             </div>
                             <div class="form-group">
                                 <label for="nombreUsuario">Contraseña Nueva</label>
-                                <input type="password" class="form-control" id="nombreUsuario" placeholder="Ingrese Nombre de Usuario">
+                                <input type="password" class="form-control" id="nombreUsuario" placeholder="Contraseña">
                             </div>
                             <div class="form-group">
                                 <label for="nombreUsuario">Repita la Contraseña</label>
-                                <input type="password" class="form-control" id="nombreUsuario" placeholder="Ingrese Nombre de Usuario">
+                                <input type="password" class="form-control" id="nombreUsuario" placeholder="Repita la contraseña">
                             </div>
                             <div class="form-group">
                                 <br>
