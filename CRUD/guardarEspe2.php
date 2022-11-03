@@ -18,7 +18,7 @@ try {
     $ps -> bindParam(':n', $nom);
     $ps -> bindParam(':d', $des);
     $ps -> execute();
-    header("Location: http://localhost/Desarrollo%20de%20Aplicaciones%20web/CRUD/listarEspe.php ");
+    header("Location: http://localhost/Desarrollo-de-Aplicaciones-web/CRUD/guardarEspe.html ");
 
 } catch (PDOException $th) {
     echo '<pre>';
