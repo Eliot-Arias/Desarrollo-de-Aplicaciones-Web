@@ -48,11 +48,11 @@ try {
                     $rows = $cn -> query($sql);
                     foreach ($rows as $row) {?>
                         <tr>
-                            <th scope="row"><?php echo $row[0];?></th>
+                            <th scope="row" idEspe="<?php echo $row[0]; ?>"><?php echo $row[0];?></th>
                             <td><?php echo $row[1];?></td>
                             <td><?php echo $row[2];?></td>
-                            <td><a class="btn btn-dark btn-sm" href="modificar.php?id=<?php echo $row[0];?>" role="button">modificar</a></td>
-                            <td><a class="btn btn-dark btn-sm" href="eliminar.php?id=<?php echo $row[0];?>" role="button">eliminar</a></td>
+                            <td><a class="btn btn-dark btn-sm" role="button">modificar</a></td>
+                            <td><a class="btn btn-dark btn-sm" role="button">eliminar</a></td>
                         </tr>
                     <?php } ?>
                 </tbody>

@@ -1,13 +1,13 @@
-<?php include('../template/header.php');?>
-
 <?php 
+
+include('../../template/header.php');
 
 try {    
     if (isset($_POST['nomCliente'])){
         $nomCliente = $_POST['nomCliente'];
         $apeCliente = $_POST['apeCliente'];
         $dni = $_POST['dniCliente'];
-        include('../UTILS/DB.php');
+        include('../../UTILS/DB.php');
 
         $db = new DB(); 
 
@@ -52,7 +52,7 @@ try {
                             <br>
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-form btn-primary">Guardar</button>
-                                <a class="btn btn-form btn-primary" href="listarCliente.php">Ver Lista</a>
+                                <a class="btn btn-form btn-primary" href="../listar/listarCliente.php">Ver Lista</a>
                             </div>
                         </form>
                     </div>

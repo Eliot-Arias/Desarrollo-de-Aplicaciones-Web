@@ -1,6 +1,6 @@
 <?php
 
-// $url = 'mysql: host:localhost;bdname=pruebadb';
+$url = "mysql:host=localhost;dbname=pruebadb";
 $usuario = 'root';
 $contraseña = '';
 
@@ -9,8 +9,8 @@ $contraseña = '';
 try {
     $nom = $_POST['nombreEspecialidad'];
     $des = $_POST['descripcion'];
-    $cn = new PDO("mysql:host=localhost;dbname=pruebadb", $usuario, $contraseña);
-    $cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $cn = new PDO($url, $usuario, $contraseña);
+    // $cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "INSERT INTO especialidad(NOMBRE, DESCRIPCION) VALUES (:n , :d)"; //Variables escalares... ::Importante
 
@@ -18,7 +18,7 @@ try {
     $ps -> bindParam(':n', $nom);
     $ps -> bindParam(':d', $des);
     $ps -> execute();
-    header("Location: http://localhost/Desarrollo-de-Aplicaciones-web/CRUD/guardarEspe.html ");
+    header("Location: http://localhost/Desarrollo%20de%20Aplicaciones%20web/CRUD/guardarEspe.html ");
 
 } catch (PDOException $th) {
     echo '<pre>';
