@@ -1,7 +1,7 @@
-    <?php include('../template/header.php')?>
-    <?php 
-    
-    include('../UTILS/DB.php');
+    <?php include('../../template/header.php');?>
+
+    <?php
+    include('../../UTILS/DB.php');
     $sql = "CALL LISTARFAMILIAS();";
     $db = new DB();
     $rows = $db->ejecutarConsultas($sql);
@@ -10,7 +10,7 @@
         <br>
         <h1 class="text-center">Mis Familias de Productos</h1>
         <br>        
-        <a name="" id="" class="btn btn-outline-dark" href="guardarFamilia.php" role="button">Crear Nuevo</a>
+        <a name="" id="" class="btn btn-outline-dark" href="../guardar/guardarFamilia.php" role="button">Crear Nuevo</a>
         <br>
         <br>
         <div class="row">

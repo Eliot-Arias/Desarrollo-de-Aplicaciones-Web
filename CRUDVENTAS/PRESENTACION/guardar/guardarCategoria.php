@@ -1,19 +1,16 @@
 <?php 
-include('../template/header.php');
-include('../UTILS/DB.php');
+
+include('../../template/header.php');
+include('../../UTILS/DB.php');
 
 try {    
     if (isset($_POST['nombreCategoria'])){
         $nombreFamilia = $_POST['nombreCategoria'];
         $des = $_POST['des'];
-        $familia = $_POST['idfamilia'];       
-
-        $db = new DB(); 
-
-        $sql = "CALL GUARDARCATEGORIA('$nombreFamilia', '$des', '$familia');"; //Variables escalares... ::Importante
-        
-        $db->ejecutarOperacion($sql);   
-        
+        $familia = $_POST['idfamilia'];
+        $db = new DB();
+        $sql = "CALL GUARDARCATEGORIA('$nombreFamilia', '$des', '$familia');"; //Variables escalares... ::Importante        
+        $db->ejecutarOperacion($sql);        
     }
 } catch (PDOException $th) {
     echo '<pre>';
@@ -24,8 +21,7 @@ try {
 ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                
+            <div class="col-md-3">                
             </div>
             <div class="col-md-6">
                 <br/>
@@ -51,7 +47,8 @@ try {
                                 ?>
                                 <label for="idfamilia">Familia</label>
                                 <select class="form-control" name="idfamilia" id="idfamilia">
-                                    <?php foreach ($rows as $row) {?>
+                                    <option selected disabled>-- Selecciones Familia --</option>
+                                    <?php foreach ($rows as $row) {?>                                        
                                         <option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?></option>
                                     <?php } ?> 
                                 </select>
@@ -59,7 +56,7 @@ try {
                             <br>
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-form btn-primary">Guardar</button>
-                                <a class="btn btn-form btn-primary" href="listarCategoria.php">Ver Lista</a>
+                                <a class="btn btn-form btn-primary" href="../listar/listarCategoria.php">Ver Lista</a>
                             </div>
                         </form>
                     </div>

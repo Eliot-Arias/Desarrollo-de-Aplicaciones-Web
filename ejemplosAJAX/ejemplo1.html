@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/celurean/bootstrap.min.css">
+    <title>Ejemplos Ajax 1</title>
+    <script src="JS/jquery-3.6.1.min.js"></script>
+    <script>
+        function sumar(v1, v2) {
+            var param = {'v1':v1, 'v2':v2};
+            $.ajax({
+                data: param,
+                url : 'ejemplos.php',
+                type: 'POST',
+                success: function(res){
+                    $('#res').html(res);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Ejercicio Basico 1 - Ajax PHP</h1>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="form-group">
+                            <label for="">Ingrese Valor 1</label>
+                            <input type="text" name="txtn1" id="txtn1" class="form-control" aria-describedby="helpId">
+                            <label for="">Ingrese Valor 2</label>
+                            <input type="text" name="txtn2" id="txtn2" class="form-control" aria-describedby="helpId">
+                            <button type="button" name="" id="" onclick="sumar($('#txtn1').val(), $('#txtn2').val())" class="btn btn-primary" btn-lg btn-block">Sumar Con Ajax</button> 
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <h3 id="res"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
