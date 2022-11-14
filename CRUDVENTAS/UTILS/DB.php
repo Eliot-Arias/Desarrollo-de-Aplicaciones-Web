@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class DB{
     private $user="root";
@@ -17,18 +17,6 @@ class DB{
         $cn = new PDO($this->url, $this->user, $this->password);
         $cn -> query($sql);
     }
-
-    
-
-
 }
-
-
-
-
-
-
-
-
 
 ?>
