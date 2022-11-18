@@ -3,7 +3,7 @@
 
 class DB{
 
-    private static $url = "mysql:host=localhost;dbname=usuarios";
+    private static $url = "mysql:host=localhost;dbname=pruebadb";
     private static $user = "root";
     private static $password = "";
 
@@ -20,3 +20,5 @@ class DB{
     }
 
 }
+
+?>
