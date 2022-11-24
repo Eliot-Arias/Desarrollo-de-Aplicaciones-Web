@@ -26,7 +26,6 @@
 </head>
 
 <body>
-
     <body>
         <div class="container">
             <div class="row">
@@ -37,7 +36,6 @@
                     </div>
                     <div class="card-body">
                         <p>Seleccione Plato</p>
-
                         <div class="form-group">
                             <select name="select" id="select" onchange="enviarIdPlato($('#select').val())">
                                 <?php
@@ -50,7 +48,6 @@
                             </select>
                         </div>
                         <table id="tblReceta" class="table table-hover table-striped table-responsive table-dark text-center mt-3">
-
                         </table>
                     </div>
                 </div>
