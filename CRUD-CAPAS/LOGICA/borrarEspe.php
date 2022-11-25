@@ -4,3 +4,4 @@ if(isset($_POST['id'])){
     $idEspe = $_POST['id'];
     LEspecialidad::remover($idEspe);
 }
+?>

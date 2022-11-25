@@ -14,7 +14,7 @@ include('../template/header.php');
                     <h1 class="mb-0">Registrar nuevo Curso</h1>
                 </div>
                 <div class="card-body">
-                    <form action="" id="form" autocomplete="on">
+                    <form action="" id="formCurso" autocomplete="on">
                         <div class="form-group mb-4">
                             <input type="hidden" class="form-control" id="idCurso">
                             <input type="text" class="form-control" id="nomCurso" placeholder="Nombre">
@@ -22,18 +22,18 @@ include('../template/header.php');
                         <div class="form-group mb-4">
                             <select class="form-control" name="tipoCurso" id="selectTipo">
                                 <option selected disabled>--Seleccione el Tipo de Curso--</option>
-                                <option value="1">Principales</option>
-                                <option value="2">Transversales</option>
+                                <option value="1">Transversales</option>
+                                <option value="0">Relleno</option>
                             </select>
                         </div>
                         <div class="form-group mb-4">
-                            <input type="text" class="form-control" name="horasCurso" id="" aria-describedby="helpId" placeholder="Horas">
+                            <input type="text" class="form-control" name="" id="horasCurso" aria-describedby="helpId" placeholder="Horas">
                         </div>
                         <div class="form-group mb-4">
-                            <input type="text" class="form-control" name="cicloCurso" id="" aria-describedby="helpId" placeholder="Ciclo">
+                            <input type="text" class="form-control" name="" id="cicloCurso" aria-describedby="helpId" placeholder="Ciclo">
                         </div>
                         <div class="form-group mb-4">
-                            <select class="form-control" name="idEspe" id="selectEspe">
+                            <select class="form-control" name="" id="selectEspe">
                             </select>
                         </div>
                         <hr class="my-2">
@@ -68,3 +68,4 @@ include('../template/header.php');
 <?php
 include('../template/footer.php');
 ?>
+<script src="../js/listarCurso.js"></script>

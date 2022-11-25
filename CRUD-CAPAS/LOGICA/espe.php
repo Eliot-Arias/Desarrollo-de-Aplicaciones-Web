@@ -14,3 +14,4 @@ if (isset($_POST['id'])) {
     $jsonString = json_encode($especialidades[0]);
     echo $jsonString;
 }
+?>

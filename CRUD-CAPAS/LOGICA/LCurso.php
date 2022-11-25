@@ -12,7 +12,7 @@ class LCurso{
         $idEspe = $cursos->getIdEspecialidad();
         $db = new db();
         $cnn = $db->connect();
-        $sql = "INSERT INTO `curso` (`NOMBRE`, `TIPO`, `HORAS`, `CICLO`, `IDESPECIALIDAD`) VALUES ('$nomCurso', '$tipoCurso', '$horas', '$ciclo', '$idEspe');";
+        $sql = "CALL GUARDARCURSO('$nomCurso', '$tipoCurso', '$horas', '$ciclo', '$idEspe');";
         $cnn->query($sql);
         echo "data Inserted";
     }
@@ -51,13 +51,20 @@ class LCurso{
         $cnn = $db->connect();
         $sql = "SELECT * FROM curso";
         $rows = $cnn->query($sql);
-        $especialidades = array();
+        $cursos = array();
 
         foreach ($rows as $row) {
             $curso = new Cursos();
             $curso->setIdCurso($row[0]);
             $curso->setNombre($row[1]);
-            $curso->setTipo($row[2]);
+            switch ($row[2]) {
+                case 1:
+                    $curso->setTipo("Transversal");
+                    break;
+                case 0:
+                    $curso->setTipo("Relleno");
+                    break;
+            }
             $curso->setHoras($row[3]);
             $curso->setCiclo($row[4]);
             $curso->setIdEspecialidad($row[5]);
@@ -80,7 +87,6 @@ class LCurso{
         $cnn->query($sql);
         echo "Data updated";
     }
-
 }
 
 ?>

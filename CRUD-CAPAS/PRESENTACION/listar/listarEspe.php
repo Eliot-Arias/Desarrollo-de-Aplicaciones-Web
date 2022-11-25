@@ -15,7 +15,7 @@ include('../template/header.php');
                     <h1 class="mb-0">Registrar nueva Especialidad</h1>
                 </div>
                 <div class="card-body">
-                    <form action="" id="form" autocomplete="on">
+                    <form action="" id="formEspe" autocomplete="on">
                         <div class="form-group">
                             <div class="form-floating mb-3">
                                 <input type="hidden" class="form-control" id="idEspe">
@@ -23,8 +23,8 @@ include('../template/header.php');
                                 <label for="nomEspe">Nombre</label>
                             </div>
                         </div>
-                        <div class="form-group">                            
-                            <textarea class="form-control" name="desEspe" id="desEspe" rows="5" placeholder="Especialidad"></textarea>                            
+                        <div class="form-group">
+                            <textarea class="form-control" name="" id="desEspe" rows="5" placeholder="Especialidad"></textarea>
                         </div>
                         <hr class="my-2">
                         <div class="form-group mt-2 d-grid">
@@ -45,7 +45,7 @@ include('../template/header.php');
                     </tr>
                 </thead>
                 <tbody id="contenidoTblEspe">
-                    
+
                 </tbody>
             </table>
         </div>
@@ -55,3 +55,4 @@ include('../template/header.php');
 <?php
 include('../template/footer.php');
 ?>
+<script src="../js/listarEspe.js"></script>

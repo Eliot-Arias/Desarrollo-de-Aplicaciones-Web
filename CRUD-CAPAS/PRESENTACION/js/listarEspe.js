@@ -1,28 +1,25 @@
 $(document).ready(function () {
 
-    var editar = false;
+    var editarEspe = false;
 
     tablaEspe();
-    $('#form').submit(function (e) {
-        var datosEspe = {
+    $('#formEspe').submit(function (e) {
+        const datosEspe = {
             nomEspe: $('#nomEspe').val(),
             desEspe: $('#desEspe').val(),
             idEspe: $('#idEspe').val()
         };
 
-        var url = editar == false ? '../../LOGICA/guardarEspe.php' : '../../LOGICA/modificarEspe.php';
+        var url = editarEspe == false ? '../../LOGICA/guardarEspe.php' : '../../LOGICA/modificarEspe.php';
 
         $.post(url, datosEspe, function (response) {
             console.log(response);
             tablaEspe();
-            $('form').trigger('reset');
+            $('#formEspe').trigger('reset');
+            
         });
-        e.preventDefault();
+        e.preventDefault();        
     });
-
-
-
-
 
     function tablaEspe() {
         $.ajax({
@@ -52,7 +49,7 @@ $(document).ready(function () {
             $('#nomEspe').val(especialidad.nombre);
             $('#desEspe').val(especialidad.descripcion);
             $('#idEspe').val(especialidad.ID);
-            editar = true;
+            editarEspe = true;
         });
         
     })
