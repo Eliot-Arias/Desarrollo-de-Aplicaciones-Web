@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/celurean/bootstrap.min.css">
     <script src="../JS/jquery-3.6.1.min.js"></script>
     <script src="../JS/select.js"></script>
+    <script src="../JS/envioDatos.js"></script>
     <title>Usuarios</title>
 </head>
 

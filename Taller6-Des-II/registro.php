@@ -3,7 +3,7 @@ include('template/header.php');
 $nom = "";
 $ape = "";
 $dni = "";
-if (isset($_POST[''])) {
+if (isset($_POST['nomUser'])) {
     $nom = $_POST['nomUser'];
     $ape = $_POST['apeUser'];
     $dni = $_POST['dni'];

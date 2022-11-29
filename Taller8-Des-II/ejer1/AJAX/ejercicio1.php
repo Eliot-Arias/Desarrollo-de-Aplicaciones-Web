@@ -29,7 +29,7 @@
                             <div class="form-group">
                                 <label for="">Seleccione Familia</label>
                                 <select class="form-control" onchange="enviarIdFamilia($('#selectFamilia').val())" name="" id="selectFamilia">
-                                    <option selected disabled>-- Categoria --</option>
+                                    <option selected disabled>-- FAMILIA --</option>
                                     <?php
                                     include('../DB/DB.php');
                                     $db = new db();
@@ -43,12 +43,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Seleccione Categoria</label>
-                                <select class="form-control" onchange="enviarIdCategoria($('#selectCategoria').val())" name="" id="selectCategoria">
+                                <select class="form-control" onchange="enviarIdCategoria($('#selectCategoria').val())" name="" id="selectCategoria">                                    
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="">Seleccione Producto</label>
                                 <select class="form-control" onchange="" name="" id="selectProducto">
+                                    <option selected disabled>-- PRODUCTO --</option>
                                 </select>
                             </div>
                         </form>

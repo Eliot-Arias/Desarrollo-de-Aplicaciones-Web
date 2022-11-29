@@ -1,8 +1,9 @@
+
 <?php
 include('template/header.php');
 // $cn = new DB();
 echo '<pre>';
-$rows = DB::ejectConsult('SELECT * FROM `producto`');
+$rows = DB::ejectConsult('SELECT * FROM persona');
 echo '</pre>';
 ?>
             <div class="container">

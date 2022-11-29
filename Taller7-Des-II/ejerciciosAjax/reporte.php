@@ -1,3 +1,7 @@
+<?php 
+sleep(2);
+?>
+
 <thead>
     <tr>
         <th>ID</th>
@@ -5,6 +9,7 @@
         <th>Tipo</th>
         <th>Horas</th>
         <th>Ciclo</th>
+        <th>Especialidad</th>
     </tr>
 </thead>
 <tbody>
@@ -21,6 +26,7 @@
             <td> <?php echo $row[2] ?> </td>
             <td> <?php echo $row[3] ?> </td>
             <td> <?php echo $row[4] ?> </td>
+            <td> <?php echo $row[5] ?> </td>
         </tr>
     <?php } ?>
 </tbody>

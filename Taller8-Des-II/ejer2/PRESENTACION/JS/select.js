@@ -15,7 +15,6 @@ function enviarIdPais(idPais){
                 resHTML += `
                     <option value="${res.id}">${res.nombre}</option>
                 `;
-                console.log(resHTML);
             });
             $('#selectDepartamento').html(resHTML);
         }        

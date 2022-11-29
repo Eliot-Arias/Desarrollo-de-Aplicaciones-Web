@@ -1,7 +1,7 @@
 <?php
 include('template/header.php');
 $id = $_GET['id'];
-$rows = DB::ejectConsult("SELECT * FROM `persona` WHERE id_persona=$id;");
+$rows = DB::ejectConsult("SELECT * FROM `persona` WHERE idpersona=$id;");
 if(isset($_POST['nomUser'])) {
     $nom = $_POST['nomUser'];
     $ape = $_POST['apeUser'];

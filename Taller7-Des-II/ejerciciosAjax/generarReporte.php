@@ -13,6 +13,7 @@
             var param = {
                 'valor': valor
             };
+            $('#tblReporte').html('<img src="loader.gif" alt="loading"/><br/><h3>Un momento, por favor...</h3>');
             $.ajax({
                 data: param,
                 url: "reporte.php",
@@ -48,7 +49,7 @@
                         </select>
                     </div>
                     <table id="tblReporte" class="table table-hover table-striped table-responsive table-dark text-center mt-3">
-                        
+
                     </table>
                 </div>
             </div>

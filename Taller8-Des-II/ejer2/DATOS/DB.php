@@ -1,6 +1,6 @@
 <?php 
 class db{
-    private $url = "mysql:host=localhost;dbname=usuariosdb";
+    private $url = "mysql:host=localhost;dbname=logindb";
     private $user = "root";
     private $pwd = "";
 
