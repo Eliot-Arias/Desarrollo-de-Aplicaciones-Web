@@ -1,5 +1,5 @@
 <div class="card-body">
-    <form action="" id="formRegistro">
+    <form id="formRegistro">
         <div class="form-group">
             <label for="nomUser">Nombres</label>
             <input type="text" name="" id="nomUser" class="form-control" placeholder="" aria-describedby="helpId">
@@ -23,7 +23,6 @@
         <div class="form-group">
             <label for="selectPais">Pais</label>
             <select class="form-control" name="" id="selectPais">
-
             </select>
         </div>
         <div class="form-group">
@@ -46,7 +45,7 @@
             <hr class="my-3">
         </div>
         <div class="form-group mt-3 d-grid">
-            <button type="button" name="" id="" class="btn btn-dark" btn-lg btn-block">Registrarse Ahora</button>
+            <button type="submit" name="" id="" class="btn btn-dark" btn-lg btn-block">Registrarse Ahora</button>
             <p class="text-center mt-2">¿Ya esta registrado? <a class="link" href="" id="linkIngreso">Ingresar</a></p>
         </div>
     </form>

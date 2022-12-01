@@ -10,7 +10,7 @@
         </div>
         <hr class="my-3">
         <div class="form-group d-grid">
-            <button type="button" name="" id="" class="btn btn-dark" btn-lg btn-block">Ingresar</button>
+            <button type="submit" name="" id="" class="btn btn-dark" btn-lg btn-block">Ingresar</button>
         </div>
         <div class="form-group mt-2">
             <p class="text-center">¿No esta registrado? <a class="link" href="" id="linkRegistro">Registrarse</a> </p>

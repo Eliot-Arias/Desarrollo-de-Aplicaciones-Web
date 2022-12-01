@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/spacelab/bootstrap.min.css">
     <script src="AJAX/jquery-3.6.1.min.js"></script>
-    <script src="JS/Content.js"></script>
-    <script src="JS/capturaDatos.js"></script>
-    
+    <script src="JS/Content.js"></script>    
     <title>Document</title>
 </head>
 
@@ -35,7 +33,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
         </div>
