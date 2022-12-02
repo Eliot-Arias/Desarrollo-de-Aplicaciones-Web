@@ -56,6 +56,24 @@ $(document).ready(function () {
 
     });
 
+    $('#formRegistro').submit(function (e) {
+        console.log("dasdasd");
+        var nomUser = $('#nomUser').val();
+        var pwd = $('#password').val();
+        var provincia = $('#tagUser').val();
+
+        data = { nomUser, pwd, provincia }
+
+        $.post("../../LOGICA/guardarUsuario.php", data,
+            function (response) {
+                console.log(response);
+            }
+        );
+        e.preventDefault();
+        $('#formRegistro').trigger('reset');
+        
+    });
+
 
 
 })

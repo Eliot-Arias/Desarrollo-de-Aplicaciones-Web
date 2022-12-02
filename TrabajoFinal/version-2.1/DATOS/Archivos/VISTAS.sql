@@ -1,4 +1,4 @@
--- Active: 1669788457029@@127.0.0.1@3306@trabajofinaldb
+-- Active: 1669920483595@@127.0.0.1@3306@trabajofinaldb
 
 -- CREATE VIEW AS
 
