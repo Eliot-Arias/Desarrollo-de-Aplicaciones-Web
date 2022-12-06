@@ -22,9 +22,9 @@
 
 CREATE VIEW VISTA_LOGIN AS 
 	SELECT
+		usuarios.`IDUSUARIO`,
 	    usuarios.`NOMBRE_USUARIO`,
-	    usuarios.`PASSWORD`,
-	    usuarios.`IDUSUARIO`
+	    usuarios.`PASSWORD`	    
 	FROM
 USUARIOS;
 

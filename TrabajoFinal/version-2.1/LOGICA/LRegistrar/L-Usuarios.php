@@ -14,20 +14,57 @@ class Lusarios{
         $nombreUsuario = $user->getNombreUsuario();
         $password = base64_encode($user->getPassword());
         $idProvincia = $user->getIdProvincia();
-        $telefono = $user->getTelefono();
+        $telefono = $user->getTelefono();        
 
-        $sql = "CALL REGISTRAR_USUARIO(':A', ':B', ':C', ':D', ':E', ':F', ':G', ':H')";
-        $save = $cnn->prepare($sql);
-        $save->bindParam(':A', $nombres);
-        $save->bindParam(':B', $apellidos);
-        $save->bindParam(':C', $edad);
-        $save->bindParam(':D', $correo);
-        $save->bindParam(':E', $nombreUsuario);
-        $save->bindParam(':F', $password);
-        $save->bindParam(':G', $idProvincia);
-        $save->bindParam(':H', $telefono);
-        $save->execute();
-        return "Data Inserted";
+        $sql1 = "CALL CONSULTAR_TAG_USUARIO('$nombreUsuario')";
+        $rows = $cnn->query($sql1);
+        if ($rows->rowCount() == 0) {
+            $cnn1 = $db->operation();
+            $sql = "CALL REGISTRAR_USUARIO('$nombres', '$apellidos', '$edad', '$correo', '$nombreUsuario', '$password', '$idProvincia', '$telefono')";
+            $cnn1->query($sql);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static function validarUsuario(usuarios $user) {
+        $db = new DB();
+        $cnn = $db->operation();
+
+        $tagName = $user->getNombreUsuario();
+        $password = base64_encode($user->getPassword());
+
+        $sql = "CALL `CONSULTAR_USUARIO`('$tagName', '$password');";
+        $rows = $cnn->query($sql);
+
+        if ($rows->rowCount() != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static function infoUser($tagUser){
+        $db = new DB();
+        $cnn = $db->operation();
+
+        $sql = "CALL `INFO_USUARIO`('$tagUser');";
+
+        $rows = $cnn->query($sql);
+
+        $userInfo = new usuarios();
+
+        foreach ($rows as $row) {
+            $userInfo->setNombres($row[1]);
+            $userInfo->setApellidos($row[2]);
+            $userInfo->setEdad($row[3]);
+            $userInfo->setCorreo($row[4]);
+            $userInfo->setNombreUsuario($row[5]);
+            $userInfo->setPassword(base64_encode($row[6]));
+            $userInfo->setTelefono($row[8]);
+        }
+        return $userInfo;
     }
 }
 

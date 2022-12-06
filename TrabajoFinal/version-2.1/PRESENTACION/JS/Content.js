@@ -17,6 +17,23 @@ $(document).ready(function () {
                 $("#tipoForm").html(response);
             },
         });
+        console.log("asdasd");
+        $('#formIngreso').submit(function (e) {
+            var tagUser = $('#tagUser').html();
+            var psw = $('#password').html();
+            data = { tagUser: tagUser, psw: psw }
+            $.ajax({
+                type: "POST",
+                url: "../../LOGICA/Validacion/validarIngreso.php",
+                data: data,
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+
+            e.preventDefault();
+
+        });
     }
     
     $(document).on('click', '#linkRegistro',function (e) {

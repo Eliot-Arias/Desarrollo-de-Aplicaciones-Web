@@ -14,12 +14,12 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/Desarrollo-de-Aplicaciones-Web/Trabaj
             <div class="card" id="tipoForm">
 
             </div>
+            
         </div>
     </div>
 </div>
 
 
-<script src="JS/capturaDatos.js"></script>
 <?php
 include_once $_SERVER["DOCUMENT_ROOT"] . "/Desarrollo-de-Aplicaciones-Web/TrabajoFinal/version-2.1/PRESENTACION/TEMPLATE/footer.php";
 ?>

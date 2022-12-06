@@ -4,12 +4,12 @@ $(document).ready(function () {
         type: "POST",
         success: function (response) {
             var paises = JSON.parse(response);
-            resHTML = "";
+            resHTML = `<option selected disabled>--Elija una Pais--</option>`;
             paises.forEach(res => {
                 resHTML += `
                     <option value="${res.id}">${res.pais}</option>
                 `
-            })
+            })            
             $('#selectPais').html(resHTML);
         }
     });
@@ -23,7 +23,7 @@ $(document).ready(function () {
             data: { idPais },
             success: function (response) {
                 var dep = JSON.parse(response);
-                resHTML = "";
+                resHTML = `<option selected disabled>--Elija una Departamento--</option>`;
                 dep.forEach(res => {
                     resHTML += `
                     <option value="${res.id}">${res.nombre}</option>
@@ -44,7 +44,7 @@ $(document).ready(function () {
             data: { idDepar },
             success: function (response) {
                 var prov = JSON.parse(response);
-                resHTML = "";
+                resHTML = `<option selected disabled>--Elija una Provincia--</option>`;
                 prov.forEach(res => {
                     resHTML += `
                     <option value="${res.id}">${res.nombre}</option>
@@ -55,25 +55,50 @@ $(document).ready(function () {
         });
 
     });
+    
 
+
+    //Formulario Registro 
     $('#formRegistro').submit(function (e) {
-        console.log("dasdasd");
         var nomUser = $('#nomUser').val();
-        var pwd = $('#password').val();
-        var provincia = $('#tagUser').val();
+        var apeUser = $('#apeUser').val();
+        var emailUser = $('#emailUser').val();
+        var tagUser = $('#tagUser').val();
+        var edad = $('#edad').val();
+        var telefono = $('#telefono').val();
+        var provincia = $('#provincia').val();
+        var password = $('#password').val();
 
-        data = { nomUser, pwd, provincia }
+        var data = { nomUser, apeUser, edad, tagUser, emailUser, telefono, provincia, password};
 
-        $.post("../../LOGICA/guardarUsuario.php", data,
-            function (response) {
-                console.log(response);
+        $.ajax({
+            type: "POST",
+            url: "../LOGICA/Registro/guardarUsuario.php",
+            data: data,
+            success: function (response) {
+                var res = JSON.parse(response);
+                if (res.valor) {
+                    $.post("error/confirm.php",
+                        function (response) {
+                            $('#confirmacion').html(response);
+                            setTimeout(function () {
+                                $('#confirmacion').fadeOut(1500);
+                            }, 3000);
+                        }
+                    );
+                } else {
+                    $.post("error/errorRegistro.php", 
+                        function (response) {
+                            $('#confirmacion').html(response);
+                            setTimeout(function () {
+                                $('#confirmacion').fadeOut(1500);
+                            }, 3000);
+                        }
+                    );
+                }
             }
-        );
+        });
         e.preventDefault();
-        $('#formRegistro').trigger('reset');
-        
+        $('formRegistro').trigger('reset');
     });
-
-
-
 })

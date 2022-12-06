@@ -9,6 +9,10 @@
             <input type="text" name="" id="apeUser" class="form-control" placeholder="" aria-describedby="helpId">
         </div>
         <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="text" name="" id="edad" class="form-control" placeholder="" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
             <label for="tagUser">Nombre de Usuario</label>
             <input type="text" name="" id="tagUser" class="form-control" placeholder="" aria-describedby="helpId">
         </div>
@@ -39,13 +43,14 @@
             <label for="password">Ingrese Contraseña</label>
             <input type="password" class="form-control" name="" id="password" placeholder="">
         </div>
-        <div class="form-group">
-            <label for="passwordConfirm">Repita la Contraseña</label>
-            <input type="password" class="form-control" name="" id="passwordConfirm" placeholder="">
+        <div class="form-group mt-3">
+            <div id="confirmacion">
+                
+            </div>
             <hr class="my-3">
         </div>
         <div class="form-group mt-3 d-grid">
-            <button type="submit" name="" id="" class="btn btn-dark" btn-lg btn-block">Registrarse Ahora</button>
+            <button type="submit" name="" id="" class="btn btn-outline-dark" btn-lg btn-block">Registrarse Ahora</button>
             <p class="text-center mt-2">¿Ya esta registrado? <a class="link" href="" id="linkIngreso">Ingresar</a></p>
         </div>
     </form>
