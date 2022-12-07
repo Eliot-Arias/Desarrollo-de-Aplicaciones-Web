@@ -1,6 +1,6 @@
 <?php
 include_once $_SERVER["DOCUMENT_ROOT"] . '/Desarrollo-de-Aplicaciones-Web/Examen-Habilidades/Logica/Lcurso.php';
-if (isset($_POST['nombre'], $_POST['idEspe']) ) {
+if (isset($_POST['nombre']) and isset($_POST['idEspe']) ) {
     $nomCurso = $_POST['nombre'];
     $idEspe = $_POST['idEspe'];
     $guardar = new Cursos();

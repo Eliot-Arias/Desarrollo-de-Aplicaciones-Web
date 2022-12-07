@@ -10,9 +10,15 @@ class LCurso{
         $db = new db();
         $cnn = $db->connect();
         try {
-            $sql = "INSERT INTO `tbl_curso` (`ID_CURSO`, `NOMBRE`, `ID_ESPECIALIDAD`) VALUES (NULL, '$nomCurso', '$idEspe');";
-            $cnn->query($sql);
-            return true;
+            if ($nomCurso != "" and $idEspe != "") {
+                $sql = "INSERT INTO `tbl_curso` (`ID_CURSO`, `NOMBRE`, `ID_ESPECIALIDAD`) VALUES (NULL, '$nomCurso', '$idEspe');";
+                $cnn->query($sql);
+                return true;
+            } else {
+                return false;
+            }
+            
+            
         } catch (PDOException $th) {
             return false;
         }
