@@ -5,7 +5,4 @@ INSERT INTO tbl_especialidad (NOMBRE, DESCRIPCION) VALUES ('Seguridad', 'Todo so
 INSERT INTO tbl_especialidad (NOMBRE, DESCRIPCION) VALUES ('Diseño', 'Todo sobre Diseño ');
 INSERT INTO tbl_especialidad (NOMBRE, DESCRIPCION) VALUES ('Mecanica', 'Todo sobre Mecanica ');
 
---Cursos
 
-
-SELECT * FROM `tbl_especialidad` 
